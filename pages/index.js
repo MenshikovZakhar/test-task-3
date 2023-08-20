@@ -1,9 +1,11 @@
 import styles from "../styles/index.module.css";
+import Head from 'next/head'
+import Cards from '../components/Cards';
 
-export default () => (
-  <div className={styles.page}>
-    <header>
-      <h1>gallery</h1><h2>Original art</h2>
-    </header>
-  </div>
-)
+function Main() {
+  return (
+    <Cards />
+  )
+}
+
+export default Main;
