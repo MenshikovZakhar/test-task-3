@@ -1,6 +1,19 @@
 import styles from "../styles/index.module.css";
 import Head from 'next/head'
 
+
+<Layout>
+    {
+        this.state.images.map((image, key) =>
+            <Photo
+                LikesEntry={this.LikesEntry.bind(this)}
+                id={image.id}
+                key={key}
+                data={image} />)
+    }
+</Layout>
+
+
 function Cards() {
     return (
         <>
