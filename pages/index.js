@@ -29,7 +29,7 @@ export default class extends Component {
                 return (
                   <li className={styles.elements__card} key={index}>
 
-                    <img className={styles.image} src={`/images/11.jpg`} />
+                    <img className={styles.image} src={card.images.path} />
                     <div className={styles.elements__description}>
                       <p className={styles.card__text}>Диван</p>
                       <p className={styles.card__text}>{card.price}</p>
