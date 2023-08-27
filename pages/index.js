@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import fetch from 'isomorphic-unfetch'
 import styles from "../styles/index.module.css";
 import Head from 'next/head'
+import Link from 'next/link'
+
 export default class extends Component {
   static async getInitialProps() {
     const res = await fetch('http://localhost:4000/cards')
@@ -34,7 +36,10 @@ export default class extends Component {
                       <p className={styles.card__text}>Диван</p>
                       <p className={styles.card__text}>{card.price}</p>
                     </div>
-                    <button className={styles.card__button} type="button">Посмотреть</button>
+
+                    <Link href={{ pathname: '/card', query: { id: card.id } }}>
+                      <button className={styles.card__button} type="button">Посмотреть</button>
+                    </Link>
                   </li>
                 );
               })
