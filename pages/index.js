@@ -6,7 +6,6 @@ import Card from '../components/Card';
 
 export async function getStaticProps() {
   const res = await fetch('http://localhost:4000/cards')
-
   const cards = await res.json()
 
   return {
@@ -15,7 +14,6 @@ export async function getStaticProps() {
     }
   }
 }
-
 
 export default function Blog({ cards }) {
   return (

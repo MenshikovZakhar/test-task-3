@@ -11,7 +11,7 @@ export default (props) => {
                 <p className={styles.card__text}>{props.data.price}</p>
             </div>
 
-            <Link href={{ pathname: '/card', query: { id: props.id } }}>
+            <Link href={`/card/${props.id}`}>
                 <button className={styles.card__button} type="button">Посмотреть</button>
             </Link>
         </li>
